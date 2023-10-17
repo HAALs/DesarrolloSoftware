@@ -1,4 +1,4 @@
-USE monolithic_db;
+USE los_gatos_db;
 
 INSERT INTO django_content_type (app_label, model) VALUES('admin', 'logentry');
 INSERT INTO django_content_type (app_label, model) VALUES('auth', 'group');

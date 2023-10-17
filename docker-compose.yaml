@@ -25,7 +25,7 @@ services:
     volumes:
       - ./los_gatos/:/opt/app/los_gatos
     depends_on:
-      monolithic-db-container: 
+      los-gatos-db-container: 
         condition: service_healthy
 
   los-gatos-db-container:

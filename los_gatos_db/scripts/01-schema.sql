@@ -1,4 +1,4 @@
-USE monolithic_db;
+USE los_gatos_db;
 
 CREATE TABLE `auth_group` (
   `id` bigint(11) NOT NULL AUTO_INCREMENT,

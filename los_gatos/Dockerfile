@@ -5,7 +5,7 @@ RUN apk add py3-pip
 RUN apk add pkgconfig
 RUN apk add --virtual build-deps gcc python3-dev musl-dev
 RUN apk add --no-cache mariadb-dev
-COPY ./los_gatos /opt/app/los_gatos
+COPY ./ /opt/app/los_gatos
 
 WORKDIR /opt/app/los_gatos
 RUN pip3 install -r requirements.txt
