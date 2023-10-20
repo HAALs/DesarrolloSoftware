@@ -21,4 +21,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home.index),
     path('home/', home.index),
+    path('Bebidas/', Bebidas),
+    path('home/', home.index),
+    path('home/', home.index),
+    path('home/', home.index),
+    path('home/', home.index),
+    path('home/', home.index),
+    path('home/', home.index),
+    path('home/', home.index),
+    path('home/', home.index),
 ]
