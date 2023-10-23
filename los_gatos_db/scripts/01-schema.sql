@@ -1,5 +1,37 @@
 USE los_gatos_db;
 
+CREATE TABLE `proveedor` (
+  `id_proveedor` bigint(11) NOT NULL AUTO_INCREMENT,
+  `nombre_proveedor` varchar(150) NOT NULL,
+  PRIMARY KEY (`id_proveedor`),
+  UNIQUE KEY `nombre_proveedor` (`nombre_proveedor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `tipo_producto` (
+  `id_tipo_producto` bigint(11) NOT NULL AUTO_INCREMENT,
+  `nombre_tipo_producto` varchar(150) NOT NULL,
+  PRIMARY KEY (`id_tipo_producto`),
+  UNIQUE KEY `nombre_tipo_producto` (`nombre_tipo_producto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `sub_tipo_producto` (
+  `id_sub_tipo_producto` bigint(11) NOT NULL AUTO_INCREMENT,
+  `nombre_sub_tipo_producto` varchar(150) NOT NULL,
+  PRIMARY KEY (`id_sub_tipo_producto`),
+  UNIQUE KEY `nombre_sub_tipo_producto` (`nombre_sub_tipo_producto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `productos` (
+  `id_producto` bigint(11) NOT NULL AUTO_INCREMENT,
+  `nombre_producto` varchar(150) NOT NULL,
+  `stock` bigint(3) NOT NULL,
+  `precio` bigint(7) NOT NULL,
+  PRIMARY KEY (`id_producto`),
+  FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor`(`id_proveedor`),
+  FOREIGN KEY (`id_tipo_producto`) REFERENCES `tipo_producto`(`id_tipo_producto`),
+  FOREIGN KEY (`id_sub_tipo_producto`) REFERENCES `sub_tipo_producto`(`id_sub_tipo_producto`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 CREATE TABLE `auth_group` (
   `id` bigint(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(150) NOT NULL,
@@ -112,4 +144,5 @@ CREATE TABLE `django_admin_log` (
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`),
   CONSTRAINT `django_admin_log_chk_1` CHECK ((`action_flag` >= 0))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
