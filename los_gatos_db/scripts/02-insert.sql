@@ -1,5 +1,136 @@
 USE los_gatos_db;
 
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Coca-Cola-Company');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('CCU');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Marinela');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Savory');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Soprole');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Watts');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Gatorade');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('RedBull');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Jagermeister');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Johhnie Walker');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Pampero');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Jack Daniel');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Miguel Torres');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Ballantines');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Tanqueray');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Chivas Regal');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Fireball');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Glenlivet');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Glenmorangie');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Sandy');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Grand Old');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('The Macallan');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Watson');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('William Lawson');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Glenfidich');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Tullamore');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Jim Beam');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Alfred Giraud');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Royal Salute');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Beffeater');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Bombay');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Boolton');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Bulldog');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Empire');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Carpintero');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Gordons');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Hendricks');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Kantal');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('London');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Malfy');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Mare');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Martin Miller');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Noveno');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Mom');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Zacapa');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Barcelo');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Malibu');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Cointreu');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Havana');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Kraken');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Maddero');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Matusalem');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Mitjans');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Santa Teresa');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Viejo de Caldas');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Absolut');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Belvedere');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Eristoff');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Grey');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Nemiroff');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Nuvo');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Spirit');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Stolichnaya');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Bidu');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Don Julio');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('El Comandante');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Herradura');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Jimador');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Jose Cuervo');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Olmeca');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Orendain');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Patron');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Senda');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Sombrero Negro');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('1724');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Britvic');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Benedictino');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Cachantun');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Canada Dry');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Limon Soda');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Pepsi');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Fanta');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Sprite');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Fentimans');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('MR BIG');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Nestle');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Ramazzotti');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Aperol');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('St Germain');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Doñihue');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Disaronno');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Bailey');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Cachaza');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Tres Palos');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Diamante');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Hennessy');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Drambui');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Frangelico');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Mairnier');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Duval');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Kahlua');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Martini');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Cinzano');
+
+
+INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Bebidas');
+INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Vinos');
+INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Cervezas');
+INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Espumantes');
+INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Otros');
+
+
+INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Bebidas Coca-Cola');
+INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Bebidas CCU');
+INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Bebidas Energeticas');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 INSERT INTO django_content_type (app_label, model) VALUES('admin', 'logentry');
 INSERT INTO django_content_type (app_label, model) VALUES('auth', 'group');
 INSERT INTO django_content_type (app_label, model) VALUES('auth', 'permission');
