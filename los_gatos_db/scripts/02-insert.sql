@@ -103,6 +103,7 @@ INSERT INTO  proveedor(nombre_proveedor) VALUES('Duval');
 INSERT INTO  proveedor(nombre_proveedor) VALUES('Kahlua');
 INSERT INTO  proveedor(nombre_proveedor) VALUES('Martini');
 INSERT INTO  proveedor(nombre_proveedor) VALUES('Cinzano');
+INSERT INTO  proveedor(nombre_proveedor) VALUES('Andina');
 
 
 INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Bebidas');
@@ -117,13 +118,46 @@ INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Bebidas CCU');
 INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Bebidas Energeticas');
 
 
-
-
-
-
-
-
-
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Coca-Cola-2L','80','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Coca-Cola-3L','55','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Coca-Cola-Sin-Azucar-2L','80','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Coca-Cola-Sin-Azucar-3L','80','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Andina-Durazno-2L','80','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Andina-Manzana-2L','80','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Andina-Frutilla-2L','80','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Andina-Naranja-2L','50','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Andina-Tutifrutilla-2L','20','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Fanta-2L','30','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Fanta-3L','20','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Fanta-Sin-Azucar-2L','30','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Fanta-Sin-Azucar-3L','30','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Sprite-2L','50','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Sprite-3L','30','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Sprite-Sin-Azucar-2L','30','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Sprite-Sin-Azucar-3L','30','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Pepsi-2L','30','2000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Pepsi-3L','20','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Pepsi-Sin-Azucar-3L','30','3000');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Casillero-Del-Diablo-Merlot-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Casillero-Del-Diablo-Carmenere-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Casillero-Del-Diablo-Tinto-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Valdivieso-Rose-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Valdivieso-Demi-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Valdivieso-Moscato-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Valdivieso-Brut-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Oveja-Negra-Cabernet-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Amaranta-Demi-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Undurraga-Brut-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Vino-Gato-Tetra-Blanco-2L','30','3500');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Baron-Lacroix-Demi-750cc','20','3500');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Baron-Lacroix-Brut-750cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Undurraga-Pinot-750cc','20','2950');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Sangria-Guay-1.5L','30','2900');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Late-Harvest-Carmem-500cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Late-Harvest-Concha-y-Toro-375cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Late-Harvest-Concha-y-Toro-500cc','30','5700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Miller-Pack-6-330cc','30','4700');
+INSERT INTO productos(nombre_producto, stock, precio) VALUES('Heyneken-Sin-Alcohol-Pack-330cc','30','4700');
 
 
 

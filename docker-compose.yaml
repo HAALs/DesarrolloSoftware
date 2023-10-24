@@ -25,10 +25,10 @@ services:
     volumes:
       - ./los_gatos/:/opt/app/los_gatos
     depends_on:
-      los-gatos-db-container: 
+      los-gatos-db-container-1: 
         condition: service_healthy
 
-  los-gatos-db-container:
+  los-gatos-db-container-1:
     build:
       context: ./los_gatos_db
       dockerfile: Dockerfile
