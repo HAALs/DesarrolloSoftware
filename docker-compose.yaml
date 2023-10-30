@@ -10,7 +10,7 @@ services:
       dockerfile: Dockerfile
     environment:
       # SERVER CONFIG
-      SERVER_PORT: "8000"
+      SERVER_PORT: "8001"
       SERVER_HOST: "0.0.0.0"
       # DATABASE CONFIG
       DB_NAME: "los_gatos_db"
@@ -19,21 +19,21 @@ services:
       DB_HOST: "los-gatos-db-container" 
       DB_PORT: "3306"
     ports:
-      - 8000:8000
+      - 8001:8001
     networks:
       - monolithic-networks
     volumes:
       - ./los_gatos/:/opt/app/los_gatos
     depends_on:
-      los-gatos-db-container: 
+      los-gatos-db-container-1: 
         condition: service_healthy
 
-  los-gatos-db-container:
+  los-gatos-db-container-1:
     build:
       context: ./los_gatos_db
       dockerfile: Dockerfile
     ports:
-      - 3306:3306
+      - 3307:3306
     healthcheck:
         test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
         timeout: 10s
