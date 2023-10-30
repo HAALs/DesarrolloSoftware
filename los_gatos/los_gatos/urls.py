@@ -15,18 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from los_gatos.views import home, bebida
+from los_gatos.views import home, bebida, cerveza, otro, transbanks, pagar, vino, destilado, espumante, señal_pago, iniciar_sesion, usuario
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home.index),
-    path('bebida/', bebida.index),
-    #path('home/', home.index),
-    #path('home/', home.index),
-    #path('home/', home.index),
-    #path('home/', home.index),
-    #path('home/', home.index),
-    #path('home/', home.index),
-    #path('home/', home.index),
-    #path('home/', home.index),
+    path('home/', home.index),
+    path('Bebidas/', bebida.Bebidas),
+    path('Cervezas/', cerveza.Cervezas),
+    path('Otros/', otro.Otros),
+    path('Transbank/', transbanks.Transbank),
+    path('Pagar/', pagar.Pagar),
+    path('Vinos/', vino.Vinos),
+    path('Destilados/', destilado.Destilados),
+    path('Espumantes/', espumante.Espumantes),
+    path('Pagando/', señal_pago.Pagando),
+    path('Iniciar sesión/', iniciar_sesion.Iniciar_sesión),
+    path('Usuario/', usuario.Usuario)
 ]
