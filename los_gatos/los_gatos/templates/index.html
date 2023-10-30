@@ -42,13 +42,13 @@
             <div class="swiper mySwiper-1">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img class="slider" src="images/abarrotes.jpg" alt="" />
+                  <img class="slider" src="{% static 'images/abarrotes.jpg' %}" alt="" />
                 </div>
                 <div class="swiper-slide">
-                  <img class="slider" src="images/alcohol.jpg" alt="" />
+                  <img class="slider" src="{% static 'images/alcohol.jpg' %}" alt="" />
                 </div>
                 <div class="swiper-slide">
-                  <img class="slider" src="images/dulces.jpg" alt="" />
+                  <img class="slider" src="{% static 'images/dulces.jpg' %}" alt="" />
                 </div>
               </div>
               <div class="swiper-button-next"></div>
@@ -65,7 +65,7 @@
               <div class="swiper-slide">
                 <div class="swiper-pagination"></div>
                 <div class="product">
-                  <img src="images/productos_principales.png" alt="" />
+                  <img src="{% static 'images/productos_principales.png' %}" alt="" />
                 </div>
               </div>
             </div>
@@ -89,12 +89,12 @@
     <footer class="footer container">
       <hr />
       <div class="footer-txt">
-        <img src="images/logo.jpg" alt="" />
+        <img src="{% static 'images/logo.jpg' %}" alt="" />
         <div class="links">
           <div class="socials">
-            <img src="images/s1.svg" alt="" />
-            <img src="images/s2.svg" alt="" />
-            <img src="images/s3.svg" alt="" />
+            <img src="{% static 'images/s1.svg' %}" alt="" />
+            <img src="{% static 'images/s2.svg' %}" alt="" />
+            <img src="{% static 'images/s3.svg' %}" alt="" />
           </div>
           <p>@Los_Gatos</p>
         </div>
@@ -110,6 +110,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
