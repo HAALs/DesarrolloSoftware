@@ -1,9 +1,8 @@
 USE los_gatos_db;
 
 CREATE TABLE proveedor (
-  id_proveedor bigint(11) NOT NULL AUTO_INCREMENT,
+  id_proveedor bigint identity(11),
   nombre_proveedor varchar(150) NOT NULL,
-  PRIMARY KEY (id_proveedor),
   UNIQUE KEY nombre_proveedor (nombre_proveedor)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
