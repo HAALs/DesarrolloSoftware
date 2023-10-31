@@ -78,6 +78,18 @@ WSGI_APPLICATION = 'los_gatos.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+DB_NAME= os.getenv('DB_NAME'),  
+DB_USER = os.getenv('DB_USER'),  
+DB_PASS = os.getenv('DB_PASS'),  
+DB_HOST = os.getenv('DB_HOST'),  
+DB_PORT = os.getenv('DB_PORT'),  
+
+print(f'DB_NAME: {DB_NAME}')
+print(f'DB_USER: {DB_USER}')
+print(f'DB_PASS: {DB_PASS}')
+print(f'DB_HOST: {DB_HOST}')
+print(f'DB_PORT: {DB_PORT}')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  
