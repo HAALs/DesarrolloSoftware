@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from los_gatos.views import home, bebida, cerveza, otro, transbanks, pagar, vino, destilado, espumante, señal_pago, iniciar_sesion, usuario
+from los_gatos.views import senal_pago
+from los_gatos.views import home, bebida, cerveza, otro
+from los_gatos.views import transbanks, pagar, vino, destilado
+from los_gatos.views import espumante, iniciar_sesion, usuario
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,7 +32,10 @@ urlpatterns = [
     path('vinos/', vino.index),
     path('destilados/', destilado.index),
     path('espumantes/', espumante.index),
-    path('pagando/', señal_pago.index),
+    path('pagando/', senal_pago.index),
     path('login/', iniciar_sesion.index),
     path('usuario/', usuario.index),
+    path('webpay-plus-create', transbanks.index),
+    path('commit-pay/', transbanks.commit_pay),
+
 ]
