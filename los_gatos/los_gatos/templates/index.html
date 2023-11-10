@@ -3,54 +3,17 @@
 {% load static %}
 {% block content %}
 
-      <div class="row">
-        <div class="col">
-          <div class="header-content container">
-            <div class="swiper mySwiper-1">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img class="slider" src="{% static 'images/abarrotes.jpg' %}" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img class="slider" src="{% static 'images/alcohol.jpg' %}" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img class="slider" src="{% static 'images/dulces.jpg' %}" alt="" />
-                </div>
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-pagination"></div>
+    <div class="row">
+        {% for product in products %}
+        <div class="card m-4" style="width: 19rem;">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="row"></div>
-        <div class="col"></div>
-          <div class="swiper mySwiper-2 container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="swiper-pagination"></div>
-                <div class="product">
-                  <img src="{% static 'images/productos_principales.png' %}" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="nosotros">
-      <div class="nosotros-txt container">
-        <a href="#" class="enlace">
-        <h2>Ubicación: direccion</h2>
-        <p>Telefono: telefono</p>
-        <p>Correo: Correo</p>
-        </a>
-      </div>
-    </section>
-
-    {% endblock %}
+    {% endfor %}
+    </div>
+{% endblock %}
