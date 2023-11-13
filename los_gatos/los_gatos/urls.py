@@ -35,7 +35,7 @@ urlpatterns = [
     path('pagando/', senal_pago.index),
     path('login/', iniciar_sesion.index),
     path('usuario/', usuario.index),
+    path('registro/', transbanks.index),
     path('webpay-plus-create', transbanks.index),
     path('commit-pay/', transbanks.commit_pay),
-
 ]
