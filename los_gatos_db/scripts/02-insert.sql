@@ -29,8 +29,6 @@ INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Dulces');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-2L','80','2000','Con-Gas', 'https://unimarc.vtexassets.com/arquivos/ids/235259/000000000000118159-UN-01.png?v=638276387703400000','1','1','1');
 
 
-
-
 INSERT INTO django_content_type (app_label, model) VALUES('admin', 'logentry');
 INSERT INTO django_content_type (app_label, model) VALUES('auth', 'group');
 INSERT INTO django_content_type (app_label, model) VALUES('auth', 'permission');

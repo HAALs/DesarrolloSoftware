@@ -1,16 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from los_gatos.models.models import Productos
 
 # Create your views here.
 def index(request):
     
-    product = {
-        'title': 'titulo ejemplo',
-        'subtitle': 'subtitulo ejemplo',
-        'detail': 'detalle .....',
-        'link_izquierdo': 'link 1',
-        'link_derecho': 'link 2'
-
-    }
-    products = [product, product, product, product, product, product]
+    product = Productos.objects.all()
     return render(request, "index.html", {'products': products})

@@ -125,6 +125,8 @@ class Productos(models.Model):
     nombre_producto = models.CharField(max_length=150)
     stock = models.BigIntegerField()
     precio = models.BigIntegerField()
+    caracteristica = models.CharField(max_length=150)
+    imagen = models.TextField()
     id_proveedor = models.ForeignKey('Proveedor', models.DO_NOTHING, db_column='id_proveedor', blank=True, null=True)
     id_tipo_producto = models.ForeignKey('TipoProducto', models.DO_NOTHING, db_column='id_tipo_producto', blank=True, null=True)
     id_sub_tipo_producto = models.ForeignKey('SubTipoProducto', models.DO_NOTHING, db_column='id_sub_tipo_producto', blank=True, null=True)
