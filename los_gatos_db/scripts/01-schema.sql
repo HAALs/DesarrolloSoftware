@@ -31,7 +31,6 @@ CREATE TABLE productos (
   id_tipo_producto bigint(11),
   id_sub_tipo_producto bigint(11),
   PRIMARY KEY (id_producto),
-  UNIQUE KEY `productos_id_proveedor_id_tipo_producto_02ab375a_uniq` (id_proveedor,id_tipo_producto),
   CONSTRAINT `productos_id_tipo_producto_2f476e4b_fk_id_proveedor` FOREIGN KEY (id_proveedor) REFERENCES proveedor (id_proveedor),
   CONSTRAINT `productos_id_proveedor_3f586e4b_fk_id_tipo_producto` FOREIGN KEY (id_tipo_producto) REFERENCES tipo_producto (id_tipo_producto),
   CONSTRAINT `productos_id_sub_tipo_producto_3f576e9a_fk_id_sub_tipo_producto` FOREIGN KEY (id_sub_tipo_producto) REFERENCES sub_tipo_producto (id_sub_tipo_producto)
