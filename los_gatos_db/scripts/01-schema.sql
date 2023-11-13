@@ -17,7 +17,6 @@ CREATE TABLE tipo_producto (
 CREATE TABLE sub_tipo_producto (
   id_sub_tipo_producto bigint(11) NOT NULL AUTO_INCREMENT,
   nombre_sub_tipo_producto varchar(150) NOT NULL,
-  caracteristica varchar(150) NOT NULL,
   PRIMARY KEY (id_sub_tipo_producto),
   UNIQUE KEY nombre_sub_tipo_producto (nombre_sub_tipo_producto)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -27,6 +26,7 @@ CREATE TABLE productos (
   nombre_producto varchar(150) NOT NULL,
   stock bigint(3) NOT NULL,
   precio bigint(7) NOT NULL,
+  caracteristica varchar(150) NOT NULL,
   id_proveedor bigint(11),
   id_tipo_producto bigint(11),
   id_sub_tipo_producto bigint(11),
