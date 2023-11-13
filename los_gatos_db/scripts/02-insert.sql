@@ -26,12 +26,11 @@ INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Espumantes CCU')
 INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Snacks');
 INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Dulces');
 
-
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-2L','80','2000','Con-Gas','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-3L','80','2800','Con-Gas','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-Sin-Azucar-2L','80','2000','Con-Gas','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-Sin-Azucar-3L','80','2800','Con-Gas','1','1','1');
-INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-Light-2L','80','2000','1','Con-Gas','1','1');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-Light-2L','80','2000','Con-Gas','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-Light-3L','80','2800','Con-Gas','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Sprite-2L','80','2000','Con-Gas','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Sprite-3L','80','2800','Con-Gas','1','1','1');
@@ -193,14 +192,6 @@ INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveed
 
 
 
-
-
-INSERT INTO productos(nombre_producto, stock, precio, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Pepsi-2L','80','2000','2','1','2');
-INSERT INTO productos(nombre_producto, stock, precio, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Casillero-Del-Diablo-Merlot-750cc','30','4700','2','2','6');
-INSERT INTO productos(nombre_producto, stock, precio, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Cerveza-Austral-1L','30','4700','2','3','4');
-INSERT INTO productos(nombre_producto, stock, precio, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Cheetos','80','2000','6','5','9');
-INSERT INTO productos(nombre_producto, stock, precio, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Gansito','80','2000','3','5','10');
-INSERT INTO productos(nombre_producto, stock, precio, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Danky-21','80','2000','4','5','10');
 
 INSERT INTO django_content_type (app_label, model) VALUES('admin', 'logentry');
 INSERT INTO django_content_type (app_label, model) VALUES('auth', 'group');
