@@ -26,6 +26,7 @@ CREATE TABLE productos (
   nombre_producto varchar(150) NOT NULL,
   stock bigint(3) NOT NULL,
   precio bigint(7) NOT NULL,
+  caracteristica varchar(150) NOT NULL,
   id_proveedor bigint(11),
   id_tipo_producto bigint(11),
   id_sub_tipo_producto bigint(11),
