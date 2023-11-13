@@ -2,7 +2,21 @@
 
 {% load static %}
 {% block content %}
-
+<?php
+    function conectar()
+    {
+        $x = new sqlsrv(
+            "Direción IP",
+            "User", "ABC.12345!", "B. Datos"
+        )
+        if($x->connection_aborted)
+        {
+            die("Error: ".$x->sqlsrv_connect_errno().$x->sqlsrv_connect:error());
+            exit;
+        }
+        return $x;
+    }
+?>">
     <div class="row">
         {% for product in products %}
         <div class="card m-4" style="width: 19rem;">
