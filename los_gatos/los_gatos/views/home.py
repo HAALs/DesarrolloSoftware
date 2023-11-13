@@ -6,4 +6,4 @@ from los_gatos.models.models import Productos
 def index(request):
     
     product = Productos.objects.all()
-    return render(request, "index.html", {'products': products})
+    return render(request, "index.html", {'product': product})
