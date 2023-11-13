@@ -1,0 +1,208 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grupo Cero | Regístrate</title>
+
+    <link rel="stylesheet" href="{% static '/css/style2.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="{% static '/css/style2.css' %}" />
+  </head>
+  <body>
+    <!--Menu navegacion-->
+    <nav
+      class="container navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/index/"
+          ><span class="nombre-company"
+            ><span class="letter-g">G</span>rupo</span
+          >&nbsp;Cero</a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="/index/">Inicio </a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="/manualidades/">Manualidades</a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="/esculturas/">Esculturas</a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="/pinturas/">Pinturas</a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="/artistas/">Artistas</a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="/nosotros/">Compañía</a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="/registrar_usuario"
+                >Registrar Usuario</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+  <body>
+    <div class="container">
+      <div style="text-align: center">
+        <h2>Regístrate</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="{% static '/images/registrate.jpg' %}" style="width: 100%" />
+        </div>
+        <div class="column">
+          
+            
+            
+            <div class="container">
+              <div class="panel panel-default">
+                 <div class="panel-heading">
+                    <h4 class="panel-title">Por favor, rellena este formulario</h4>
+                 </div>
+                 <form action="/registrar/" method="POST">{% csrf_token %}
+                  <div class="panel-body">           
+                     <!-- <form class="form-horizontal" id="signupForm"> -->
+                     <br />
+                     
+                     <div class="form-group">
+                         <label for="fullname" class="col-sm-2 control-label">Nombre</label>
+                         <div class="col-sm-10">
+                             <input type="text" id="fullname" name="fullname" class="form-control">
+                         </div>
+                     </div>
+ 
+                     <div class="form-group">
+                         <label for="lastname" class="col-sm-2 control-label">Apellido</label>
+                         <div class="col-sm-10">
+                             <input type="text" id="lastname" name="lastname" class="form-control">
+                         </div>
+                     </div>
+                    
+                    <div class="form-group">
+                         <label for="email" class="col-sm-2 control-label">Email</label>
+                         <div class="col-sm-10">
+                             <input type="text" id="email" name="email" class="form-control">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label for="password" class="col-sm-2 control-label">Contraseña</label>
+                         <div class="col-sm-10">
+                             <input type="password" id="password" name="password" class="form-control">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label for="confirm_password" class="col-sm-6 control-label">Confirma tu contraseña</label>
+                         <div class="col-sm-10">
+                             <input type="password" id="confirm_password" name="confirm_password" class="form-control">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                     <label for="comuna" class="col-sm-2 control-label">Comuna</label>
+                     <div class="col-sm-10">
+                          <select id="comuna" name="comuna" required>
+                                      <option></option>
+                                      <option value="santiago_centro">Santiago Centro</option>
+                                      <option value="maipu">Maipú</option>
+                                      <option value="pedro_aguirre_cerda">Pedro Aguirre Cerda</option>
+                                      <option value="nunoa">Ñuñoa</option>
+                                      <option value="puente_alto">Puente Alto</option>
+                                      <option value="la_florida">La Florida</option>
+                                      <option value="macul">Macul</option>
+                                      <option value="cerrillos">Cerrillos</option>
+                                      <option value="la_pintana">La Pintana</option>
+                                      <option value="las_condes">Las Condes</option>
+                                      <option value="penalolen">Peñalolén</option>
+                                      <option value="vitacura">Vitacura</option>
+                                    </select></div>
+                                   </div>     
+                    
+                     <div class="form-group">
+                       <div class="col-sm-offset-2 col-sm-10">                  
+                          <div class="checkbox">
+                             <label> <input type="checkbox" id="agree" name="agree" value="agree">   He leído los términos de condición y uso.</label>                   
+                          </div>
+                          <em id="agree-error" class="help-block"></em>
+                       </div>            
+                     </div>
+                     
+                     <div class="form-group">
+                         <div class="col-sm-offset-2 col-sm-10">
+                             <input type="submit" class="btn btn-primary" value="Enviar" />
+                         </div>
+                     </div>
+         
+                 <!-- </form>  -->
+                  </div>
+                  </form>
+              </div>
+           </div>
+          <!-- </form>Zz -->
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+    <script src="js/validacion.js"></script>
+  </body>
+</html>
+{% endblock %}
