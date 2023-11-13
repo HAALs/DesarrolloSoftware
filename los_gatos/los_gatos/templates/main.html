@@ -13,42 +13,6 @@
 </head>
 
 <body>
-    <?php 
-    $username = "root"; 
-    $password = "1234567890"; 
-    $database = "los_gatos_db"; 
-    $mysqli = new mysqli("localhost", $username, $password, $database); 
-    $query = "SELECT * FROM productos";
-    
-    
-    echo '<table border="0" cellspacing="2" cellpadding="2"> 
-          <tr> 
-              <td> <font face="Arial">Value1</font> </td> 
-              <td> <font face="Arial">Value2</font> </td> 
-              <td> <font face="Arial">Value3</font> </td> 
-              <td> <font face="Arial">Value4</font> </td> 
-              <td> <font face="Arial">Value5</font> </td> 
-          </tr>';
-    
-    if ($result = $mysqli->query($query)) {
-        while ($row = $result->fetch_assoc()) {
-            $field1name = $row["col1"];
-            $field2name = $row["col2"];
-            $field3name = $row["col3"];
-            $field4name = $row["col4"];
-            $field5name = $row["col5"]; 
-    
-            echo '<tr> 
-                      <td>'.$id_producto.'</td> 
-                      <td>'.$nombre_producto.'</td> 
-                      <td>'.$stock.'</td> 
-                      <td>'.$precio.'</td> 
-                      <td>'.$caracteristica.'</td> 
-                  </tr>';
-        }
-        $result->free();
-    } 
-    ?>
     <div class="container mt-2">
         <nav class="navbar navbar-expand-lg my-4 border-bottom">
             <div class="container-fluid">    
