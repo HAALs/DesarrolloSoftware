@@ -137,7 +137,33 @@ INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveed
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Bestia-Azul-Merlot-750CC','50','4700','Merlot','2','2','6');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Bestia-Azul-Carmenere-750CC','50','4335','Carmenere','2','2','6');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Bestia-Azul-Cabernet-Sauvignon-750CC','50','4335','Cabernet-Sauvignon','2','2','6');
-INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Cristal-Pack-x6-470CC','50','4770','Cristal','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Cristal-Pack-X6-470CC','50','4770','Cristal','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Royal-Pack-X6-470CC','50','5500','Royal','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Morenita-Malta-Pack-X6-350CC','50','4799','Malta','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Escudo-Pack-x6-470CC','50','4200','Escudo','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Escudo-Silver-Pack-x6-470CC','50','3900','Escudo-Silver','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Cristal-Cero-Pack-x6-350CC','50','3200','Cristal-Cero','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Lemon-Stones-1.5L','50','2200','Lemon-Stones','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Maracuya-Stones-350CC-Pack-X6','50','5000','Maracuya-Stones','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Heineken-Sin-Alcohol-330CC','50','6000','Heiniken-Sin-Alcohol','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Heineken-Pack-X6-330CC','50','5600','Heiniken','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Sol-Pack-X6-335CC','50','4300','Sol-Pack','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Sol-710CC','50','1490','Sol','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Lemon-Stones-1.5L','50','2200','Lemon-Stones','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Lemon-Stones-1.5L','50','2200','Lemon-Stones','2','3','4');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Lemon-Stones-1.5L','50','2200','Lemon-Stones','2','3','4');
+
+
+
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Chocolito','30','890','Chocolito','4','5','10');
+
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Yoguito-Vainilla-120g','50','260','Yoguito','6','5','10');
+
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Cheetos-280g','50','1890','Cheetos','6','5','9');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Cheetos-Queso-Crema-250g','50','1590','Cheetos-Queso-Crema','6','5','9');
+
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Misiones-de-Rengo-Demi-Sec-750CC','50','4770','Demi-Sec','2','4','8');
+
 
 
 
