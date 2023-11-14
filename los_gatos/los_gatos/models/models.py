@@ -134,6 +134,7 @@ class Productos(models.Model):
     class Meta:
         managed = False
         db_table = 'productos'
+        unique_together = (('id_proveedor', 'id_tipo_producto', 'id_sub_tipo_producto'),)
 
 
 class Proveedor(models.Model):
