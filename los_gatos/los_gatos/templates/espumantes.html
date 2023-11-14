@@ -3,30 +3,40 @@
 {% load static %}
 {% block content %}
 
-  agregar contenido de bebidas
+<div class="container">
 
-  <div class="dropdown show">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Precio
-    </a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" href="#">
-        <label for="customRange1" class="form-label">rango de precio</label>
-        <input type="range" class="form-range" id="customRange1">
-      </a>
+  <!-- FORMULARIO DE FILTRO DE PRODUCTOS POR TIPO -->
+
+  <form class="g-3" method="POST" action=".">{% csrf_token %}
+    <div class="row">
+      <div class="col-auto">
+        <select class="form-select" aria-label="Default select example" name="tipo">
+          {% for tipo in tipos %}
+          <option value="{{tipo.id_tipo_producto}}">{{tipo.nombre_tipo_producto}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="row my-4 mx-5 px-5">
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">BUSCAR</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- LISTADO DE PRODUCTOS -->
+<div class="row">
+  {% for product in products %}
+  <div class="card m-4" style="width: 19rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{product.nombre_producto}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{product.precio}}</h6>
+      <p class="card-text"><img src={{product.imagen}} width="220px"></img></p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
     </div>
   </div>
-
-  <div class="dropdown show">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Tipo
-    </a>
-  
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" href="#">Brut</a>
-      <a class="dropdown-item" href="#">Demi sec</a>
-      <a class="dropdown-item" href="#">Moscato</a>
-      <a class="dropdown-item" href="#">Rose</a>
-    </div>
-  </div>
-    {% endblock %}
+  {% endfor %}
+</div>
+{% endblock %}
