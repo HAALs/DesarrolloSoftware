@@ -47,6 +47,11 @@ INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Powerade-Frozen-Blast-1L','80','1350','Isotonica','https://jumbo.vtexassets.com/arquivos/ids/642684-1000-1000?width=1000&height=1000&aspect=true','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Powerade-Rojo-1L','80','1350','Isotonica','https://jumbo.vtexassets.com/arquivos/ids/682344-1000-1000?width=1000&height=1000&aspect=true','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Powerade-Naranja-1L','80','1350','Isotonica','https://images.lider.cl/wmtcl?source=url[file:/productos/1375112a.jpg]&scale=size[2000x2000]&sink','1','1','1');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Medalla-Real-Cabernet-Sauvignon-750ML','80','4990','Cabernet-Sauvignon','https://images.lider.cl/wmtcl?source=url[file:/productos/4523a.jpg]&scale=size[2000x2000]&sink','1','2','5');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Medalla-Real-Carmenere-750ML','80','4990','Carmenere','https://images.lider.cl/wmtcl?source=url[file:/productos/821916a.jpg]&scale=size[2000x2000]&sink','1','2','5');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Medalla-Real-Merlot-750ML','80','4990','Merlot','https://images.lider.cl/wmtcl?source=url[file:/productos/821920a.jpg]&scale=size[2000x2000]&sink','1','2','5');
+
+
 
 INSERT INTO django_content_type (app_label, model) VALUES('admin', 'logentry');
 INSERT INTO django_content_type (app_label, model) VALUES('auth', 'group');

@@ -5,5 +5,6 @@ from los_gatos.models.Model import Productos
 # Create your views here.
 def index(request):
     
-    product = Productos.objects.all()
-    return render(request, "index.html", {'product': product})
+    products = Productos.objects.all()
+    print('products:', len(products))
+    return render(request, "index.html", {'products': products})
