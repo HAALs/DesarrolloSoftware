@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from los_gatos.views import senal_pago
 from los_gatos.views import home, bebida, cerveza, otro
 from los_gatos.views import transbanks, pagar, vino, destilado
 from los_gatos.views import espumante, iniciar_sesion, usuario, registro
@@ -32,7 +31,6 @@ urlpatterns = [
     path('vinos/', vino.index),
     path('destilados/', destilado.index),
     path('espumantes/', espumante.index),
-    path('pagando/', senal_pago.index),
     path('login/', iniciar_sesion.index),
     path('usuario/', usuario.index),
     path('registro/', registro.index),
