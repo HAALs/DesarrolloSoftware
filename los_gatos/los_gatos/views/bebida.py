@@ -6,7 +6,7 @@ from los_gatos.models.models import TipoProducto, Productos
 def index(request):
     print(f'request.method: {request.method}')
     if request.method == 'GET': 
-        tipos = TipoProducto.objects.all()
+        tipos = TipoProducto.objects.filter(id_tipo_producto='1')
         products = Productos.objects.all()
         return render(request, "bebidas.html", {"tipos": tipos, "products": products})
     else: 
