@@ -7,11 +7,11 @@ def index(request):
     print(f'request.method: {request.method}')
     if request.method == 'GET': 
         tipos = TipoProducto.objects.filter(id_tipo_producto='1')
-        products = Productos.objects.all()
+        products = Productos.objects.filter(id_tipo_producto='1')
         return render(request, "bebidas.html", {"tipos": tipos, "products": products})
     else: 
         tipo = request.POST.get('tipo')
         print(f'tipo: {tipo}')
-        tipos = TipoProducto.objects.all()
-        products = Productos.objects.filter(id_tipo_producto=tipo)
+        tipos = TipoProducto.objects.filter(id_tipo_producto='1')
+        products = Productos.objects.filter(id_sub_tipo_producto=tipo)
         return render(request, "bebidas.html", {"tipos": tipos, "products": products})
