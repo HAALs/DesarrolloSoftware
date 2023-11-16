@@ -13,6 +13,7 @@ INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Vinos');
 INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Cervezas');
 INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Espumantes');
 INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Otros');
+INSERT INTO tipo_producto(nombre_tipo_producto) VALUES('Destilados');
 
 
 INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Bebidas Coca-Cola');
@@ -25,6 +26,8 @@ INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Espumantes Coca-
 INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Espumantes CCU');
 INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Snacks');
 INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Dulces');
+INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Destilados Coca-Cola');
+INSERT INTO sub_tipo_producto(nombre_sub_tipo_producto) VALUES('Destilados CCU');
 
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-2L','80','2000','Con-Gas', 'https://unimarc.vtexassets.com/arquivos/ids/235259/000000000000118159-UN-01.png?v=638276387703400000','1','1','1');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Coca-Cola-3L','80','2800','Con-Gas','https://unimarc.vtexassets.com/arquivos/ids/234057/000000000000123813-UN-01.jpg?v=638223576292330000','1','1','1');
@@ -174,6 +177,24 @@ INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Ramitas-Queso-230g','50','1890','Ramitas','https://jumbo.vtexassets.com/arquivos/ids/682002-450-450?width=450&height=450&aspect=true','6','5','9');
 INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Doritos-200g','50','1890','Doritos','https://images.lider.cl/wmtcl?source=url[file:/productos/269594a.jpg]&scale=size[2000x2000]&sink','6','5','9');
 
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Alto-Del-Carmen-35°-1.5L','50','12490','Pisco','https://micocacola.vtexassets.com/arquivos/ids/196507-1600-auto?v=638336744506930000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Alto-Del-Carmen-Transparente-40°-750ML','50','8490','Pisco','https://micocacola.vtexassets.com/arquivos/ids/196693-1600-auto?v=638354996495600000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Alto-Del-Carmen-Barricas-40°-750ML','50','11090','Pisco','https://micocacola.vtexassets.com/arquivos/ids/196687-1600-auto?v=638354996430900000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Alto-Del-Carmen-Etiqueta-Negra-40°-750ML','50','12490','Pisco','https://micocacola.vtexassets.com/arquivos/ids/196513-1600-auto?v=638336744590700000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Estrella-Del-Elqui-Sour-14°-750CC','50','7390','Pisco-Sour','https://micocacola.vtexassets.com/arquivos/ids/196545-1600-auto?v=638337695421730000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Gin-Tanqueray-London-700L','50','16990','Gin','https://micocacola.vtexassets.com/arquivos/ids/193740-1600-auto?v=638151012207930000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Alto-Del-Carmen-Etiqueta-Blanca-40°-750ML','50','13490','Pisco','https://micocacola.vtexassets.com/arquivos/ids/195003-1600-auto?v=638278792529370000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Johnnie-Walker-Red-Label-1.5L','50','22990','Whisky','https://micocacola.vtexassets.com/arquivos/ids/196621-1600-auto?v=638346362324230000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Baileys-Original-Irish-Cream-750ML','50','12490','Whisky','https://micocacola.vtexassets.com/arquivos/ids/193776-1600-auto?v=638161430458970000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Capel-Piña-Colada-12°-700ML','50','12490','Pisco','https://micocacola.vtexassets.com/arquivos/ids/195715-1600-auto?v=638296912871300000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Tanqueray-700ML','50','17980','Gin','https://micocacola.vtexassets.com/arquivos/ids/196609-1600-auto?v=638346321685630000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Capel-Sour-14°-1L','50','12490','Pisco','https://micocacola.vtexassets.com/arquivos/ids/195717-1600-auto?v=638296912886430000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Capel-Sour-Mango-12°-750ML','50','5990','Pisco','https://micocacola.vtexassets.com/arquivos/ids/195723-1600-auto?v=638296912934170000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Johnnie-Walker-Black-Label-750ML','50','32990','Whisky','https://micocacola.vtexassets.com/arquivos/ids/177663-1600-auto?v=637560386179500000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Capel-Ice-Frutos-Rojos-7°-275ML','50','1290','Coctel','https://micocacola.vtexassets.com/arquivos/ids/193809-1600-auto?v=638161431253330000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Gin-Gordons-London-Dry-Gin-37,5°-750ML','50','11990','Gin','https://micocacola.vtexassets.com/arquivos/ids/196505-1600-auto?v=638336744486630000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Johnnie-Walker-Red-Label-1.0L','50','12490','Whisky','https://micocacola.vtexassets.com/arquivos/ids/195962-1600-auto?v=638302964463200000&width=1600&height=auto&aspect=true','1','6','11');
+INSERT INTO productos(nombre_producto, stock, precio, caracteristica, imagen, id_proveedor, id_tipo_producto, id_sub_tipo_producto) VALUES('Johnnie-Walker-Swing-750ML','50','38590','Whisky','https://micocacola.vtexassets.com/arquivos/ids/195961-1600-auto?v=638302964448800000&width=1600&height=auto&aspect=true','1','6','11');
 
 
 
