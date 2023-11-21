@@ -61,15 +61,16 @@ def transbank_reverse_or_cancel(tokenws, data):
     return response
 
 def index(request):
-        
+    print('hola mundo')  
     if request.method == 'GET':
         #MODIFICAR ESTA SECCIÓN Y CARGAR CARRITO DESDE LA SESSIÓN
         products = []
         #MODIFICAR ESTE MONTO POR EL TOTAL A PAGAR
         total = 1
-        return render(request, "transbank.html", {'products': products, 'total': total})
+        return render(request, "carts.html", {'total': total})
     elif  request.method == 'POST':        
         total = request.POST.get('total')
+        print (total)
         host = request.get_host()
         host_parts = host.split(':')
         host = host_parts[0]
