@@ -25,13 +25,13 @@
           {% endfor %}        
         </tr>
         <form id='frm-pay' name="pay" action="/webpay-plus-create" method="POST">{% csrf_token %}
-        <tr>
-          <td></td>
-          <td><strong>Total</strong></td>
-          <td><strong>{{total}}</strong><input id='txt-total' name="total" hidden value="{{total}}" /></td>
-          <td><button class="alert alert-primary">PAGAR</button></td>       
-        </tr>
-      </form>            
+          <tr>
+            <td></td>
+            <td><strong>Total</strong></td>
+            <td><strong>{{total}}</strong><input id='txt-total' name="total" hidden value="{{total}}" /></td>
+            <td><button class="alert alert-primary">PAGAR</button></td>       
+          </tr>
+        </form>            
       </tbody>
     </table>
 </div>
