@@ -28,7 +28,6 @@ urlpatterns = [
     path('bebidas/', bebida.index),
     path('cervezas/', cerveza.index),
     path('otros/', otro.index),
-    path('transbank/', transbanks.index),
     path('pagar/', pagar.index),
     path('vinos/', vino.index),
     path('destilados/', destilado.index),
