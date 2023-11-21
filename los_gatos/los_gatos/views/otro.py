@@ -13,5 +13,5 @@ def index(request):
         tipo = request.POST.get('tipo')
         print(f'tipo: {tipo}')
         tipos = SubTipoProducto.objects.filter(id_sub_tipo_producto__in=[9,10])
-        products = Productos.objects.filter(id_tipo_producto=tipo)
+        products = Productos.objects.filter(id_sub_tipo_producto=tipo)
         return render(request, "otros.html", {"tipos": tipos, "products": products})
