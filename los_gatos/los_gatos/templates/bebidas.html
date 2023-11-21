@@ -19,6 +19,7 @@
     </div>
     <div class="row my-4 mx-5 px-5">
       <div class="col-auto">
+        <input type="hidden" name="action" value="filter">
         <button type="submit" class="btn btn-primary mb-3">BUSCAR</button>
       </div>
     </div>
@@ -33,8 +34,12 @@
       <h5 class="card-title">{{product.nombre_producto}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">${{product.precio}}</h6>
       <p class="card-text"><img src={{product.imagen}} width="220px"></img></p>
-      <a href="#" class="card-link">Añadir al Carro</a>
-      <a href="#" class="card-link">Another link</a>
+      <form class="g-3" method="POST" action=".">{% csrf_token %}
+        <input type="hidden" name="action" value="add_carts">
+        <button type="submit" class="btn btn-primary mb-3">ADD</button>
+        <button type="reset" class="btn btn-primary mb-3">REMOVE</button>
+        <input type="text" hidden name="id_producto" value="{{product.id_producto}}">
+      </form>
     </div>
   </div>
   {% endfor %}

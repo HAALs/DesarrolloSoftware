@@ -12,23 +12,19 @@
       </tr>
     </thead>
     <tbody>
-        {% for cart in carts %}
-        {% for product_stock in products_stock %}
-        {% if cart.product.id ==  product_stock.id%}
+        {% for producto in productos %}
       <tr>
         <td>
             <figure class="figure">
-                <img src="{% static cart.product.img_url %}" 
+                <img src="{{producto.imagen_url}}" 
                 style="max-width: 150px; max-height: 150px;" class="img-thumbnail" alt="">
-                    <figcaption class="figure-caption text-center">{{car.product.product_name}}</figcaption>
-                    <figcaption class="figure-caption text-center">{{car.product.product_description}}</figcaption>            
+                    <figcaption class="figure-caption text-center">{{producto.nombre_producto}}</figcaption>
+                    <figcaption class="figure-caption text-center">car.product.product_description</figcaption>            
                 </figure>                      
         </td>
-        <td>{{cart.quantity}}</td>
-        <td>{{product_stock.unit_sell_price}}</td>
-        <td>{% widthratio cart.quantity 1 product_stock.unit_sell_price %}</td>        
-        {% endif %}        
-        {% endfor %}        
+        <td>{{producto.quantity}}</td>
+        <td>{{producto.price}}</td>
+        <td>{{producto.total}}</td>             
         {% endfor %}        
       </tr>
       <form id='frm-pay' name="pay" action="/webpay-plus-create" method="POST">{% csrf_token %}

@@ -36,26 +36,26 @@ CREATE TABLE productos (
   CONSTRAINT `productos_id_proveedor_3f586e4b_fk_id_tipo_producto` FOREIGN KEY (id_tipo_producto) REFERENCES tipo_producto (id_tipo_producto),
   CONSTRAINT `productos_id_sub_tipo_producto_3f576e9a_fk_id_sub_tipo_producto` FOREIGN KEY (id_sub_tipo_producto) REFERENCES sub_tipo_producto (id_sub_tipo_producto)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-create table carts(
-	id bigint PRIMARY KEY,
-	user_id bigint,
-	product_code bigint,	
-  quantity bigint,
-	date_add timestamp,
-   	CONSTRAINT fk_carts_auth_user_id
-    	FOREIGN KEY(user_id) 
-	 	REFERENCES auth_user(id),
-   	CONSTRAINT fk_carts_product_id
-    	FOREIGN KEY(product_code) 
-	 	REFERENCES productos(id_producto)	);
+/*
+--create table carts(
+	--id bigint PRIMARY KEY,
+	--user_id bigint,
+	--product_code bigint,	
+  --quantity bigint,
+	--date_add timestamp,
+   	--CONSTRAINT fk_carts_auth_user_id
+    	--FOREIGN KEY(user_id) 
+	 	--REFERENCES auth_user(id),
+   	--CONSTRAINT fk_carts_product_id
+    	--FOREIGN KEY(product_code) 
+	 	--REFERENCES productos(id_producto)	); */
 
 
 CREATE TABLE `auth_group` (
-  `id` bigint(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(150) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
+ id bigint(11) NOT NULL AUTO_INCREMENT,
+ name varchar(150) NOT NULL,
+ PRIMARY KEY (id),
+ UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `django_content_type` (

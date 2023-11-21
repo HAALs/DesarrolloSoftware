@@ -163,15 +163,15 @@ class TipoProducto(models.Model):
         managed = False
         db_table = 'tipo_producto'
 
-class Carts(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
-    product = models.ForeignKey('Product', models.DO_NOTHING, db_column='product_code', blank=True, null=True)      
-    quantity = models.BigIntegerField(blank=True, null=True)
-    date_add = models.DateTimeField(blank=True, null=True)
-
-    def total(self, price):
-        return round(self.quantity*price)
-    class Meta:
-        managed = False
-        db_table = 'carts'
+#class Carts(models.Model):
+#    id = models.BigAutoField(primary_key=True)
+#    user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
+#    product = models.ForeignKey('Product', models.DO_NOTHING, db_column='product_code', blank=True, null=True)      
+#    quantity = models.BigIntegerField(blank=True, null=True)
+#    date_add = models.DateTimeField(blank=True, null=True)
+#
+#    def total(self, price):
+#        return round(self.quantity*price)
+#    class Meta:
+#        managed = False
+#        db_table = 'carts'

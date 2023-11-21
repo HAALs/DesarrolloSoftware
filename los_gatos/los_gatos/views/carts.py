@@ -1,35 +1,41 @@
 from django.shortcuts import render, redirect
-from los_gatos.models.models import Carts, AuthUser, Productos
+from los_gatos.models.models import  AuthUser, Productos
 from los_gatos.views.iniciar_sesion import authorization
 from django.contrib.auth.models import User
 from typing import Iterable
 import random
 
 def load(request):
-    auth, error = authorization(request, 'view_carts')
-    if not auth:
-        return redirect(error)  
+    #auth, error = authorization(request, 'view_carts')
+    #if not auth:
+        #return redirect(error)  
     print('page building')
     carts = []
     productos = []
     buy_order = str(random.randrange(1000000, 99999999))
     try: 
-        username = str(request.user)
-        print('username: ', username)
-        print('load user')
-        user = AuthUser.objects.get(username=username)
-        session_id = str(user.id)    
-        print('load carts')        
-        carts = Carts.objects.filter(user=user)
-        for cart in carts:
-            try:
-                productos.append(Productos.objects.get(id=cart.productos.id))
-            except Exception as ex:
-                print('Error: ', ex)
-                print('not stock productos id -> ', cart.id)
+        #username = str(request.user)
+        #print('username: ', username)
+        #print('load user')
+        #user = AuthUser.objects.get(username=username)
+        #session_id = str(user.id)    
+        print('load carts')
+        items = request.session.get('carts')
+        print('items: {items}')
+        total=0
+        for item in items:
+            total = total + int(item['total'])
+        #carts = Carts.objects.filter(user=user)
+        #for cart in carts:
+        #    try:
+        #        productos.append(Productos.objects.get(id=cart.productos.id))
+        #    except Exception as ex:
+        #        print('Error: ', ex)
+        #        print('not stock productos id -> ', cart.id)
     except Exception as ex:
         print('Error: ', ex)
-    return render(request, 'carts.html', {'carts': carts, 'productos': productos, 'stock': load_carts(request), 'total': total(carts, productos), 'buy_order': buy_order, 'session_id': session_id})
+    #return render(request, 'carts.html', {'carts': carts, 'productos': productos, 'stock': load_carts(request), 'total': total(carts, productos), 'buy_order': buy_order, 'session_id': session_id})
+    return render(request, 'carts.html', {'productos': items, 'total': total})
 
 def total(carts, productos):
     total = 0
