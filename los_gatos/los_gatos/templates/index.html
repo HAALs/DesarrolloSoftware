@@ -2,17 +2,22 @@
 
 {% load static %}
 {% block content %}
-    <div class="row">
-        {% for product in products %}
-        <div class="card m-4" style="width: 19rem;">
-            <div class="card-body">
-            <h5 class="card-title">{{product.nombre_producto}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${{product.precio}}</h6>
-            <p class="card-text"><img src="{{product.imagen}}" width="220px"></img></p>
-            <a href="#" class="card-link">Comprar</a>
-            <a href="#" class="card-link">Stock {{product.stock}}</a>
-            </div>
-        </div>
-    {% endfor %}
+    <!-- LISTADO DE PRODUCTOS -->
+<div class="row">
+    {% for product in products %}
+    <div class="card m-4" style="width: 19rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{product.nombre_producto}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">${{product.precio}}</h6>
+        <p class="card-text"><img src={{product.imagen}} width="220px"></img></p>
+        <form class="g-3" method="POST" action=".">{% csrf_token %}
+          <input type="hidden" name="action" value="add_carts">
+          <button type="submit" class="btn btn-primary mb-3">ADD</button>
+          <button type="submit" class="btn btn-primary mb-3">REMOVE</button>
+          <input type="text" hidden name="id_producto" value="{{product.id_producto}}">
+        </form>
+      </div>
     </div>
+    {% endfor %}
+  </div>
 {% endblock %}
