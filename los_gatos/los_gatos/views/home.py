@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 from django.shortcuts import render
 from django.http import HttpResponse
 from los_gatos.models.models import Productos
