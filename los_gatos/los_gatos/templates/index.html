@@ -3,9 +3,10 @@
 {% load static %}
 {% block content %}
 
-<form action="/buscar/" method="get">{% csrf_token %}
+<form action="." method="POST">{% csrf_token %}
   <input type="text" name="q" placeholder="Buscar productos">
-  <button type="submit">Buscar</button>
+  <input type="hidden" name="action" value="filter">
+  <button type="submit" value="Save">Buscar</button>
 </form>
 
     <!-- LISTADO DE PRODUCTOS -->
