@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+
+    <h1>Resultados de Búsqueda para "{{ query }}"</h1>
+
+    {% if resultados %}
+        <ul>
+            {% for producto in resultados %}
+                <li>{{ productos.nombre_producto }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+{% endblock %}
+

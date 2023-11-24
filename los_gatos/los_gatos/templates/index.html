@@ -2,6 +2,12 @@
 
 {% load static %}
 {% block content %}
+
+<form action="/buscar/" method="get">{% csrf_token %}
+  <input type="text" name="q" placeholder="Buscar productos">
+  <button type="submit">Buscar</button>
+</form>
+
     <!-- LISTADO DE PRODUCTOS -->
 <div class="row">
     {% for product in products %}
@@ -20,3 +26,5 @@
     {% endfor %}
   </div>
 {% endblock %}
+
+
