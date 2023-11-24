@@ -7,6 +7,6 @@ def find_productos(request):
 
     if query:
         # Realiza la búsqueda de productos por nombre
-        resultados = Productos.objects.filter(nombre_producto__icontains=query)
-
-    return render(request, 'buscar_productos.html', {'resultados': resultados, 'query': query})
+        resultados = Productos.objects.filter(nombre_producto__in=query)
+        return render(request, 'buscar_productos.html', {'resultados': resultados, 'query': query})
+    print(f"resultados:{resultados}")
