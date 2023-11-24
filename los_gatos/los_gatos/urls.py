@@ -20,8 +20,10 @@ from los_gatos.views import transbanks, pagar, vino, destilado
 from los_gatos.views import espumante, iniciar_sesion, usuario, registro,carts
 from los_gatos.views.errorpage import error_404
 from los_gatos.views import errorpage
+from los_gatos.views import buscar_productos
 
 urlpatterns = [
+    path('buscar/', buscar_productos.find_productos),
     path('admin/', admin.site.urls),
     path('', home.index),
     path('home/', home.index),
