@@ -2,6 +2,13 @@
 
 {% load static %}
 {% block content %}
+
+<form action="." method="POST">{% csrf_token %}
+  <input type="text" name="q" placeholder="Buscar productos">
+  <input type="hidden" name="action" value="filter">
+  <button type="submit" value="Save">Buscar</button>
+</form>
+
     <!-- LISTADO DE PRODUCTOS -->
 <div class="row">
     {% for product in products %}
@@ -13,7 +20,6 @@
         <form class="g-3" method="POST" action=".">{% csrf_token %}
           <input type="hidden" name="action" value="add_carts">
           <button type="submit" class="btn btn-primary mb-3">ADD</button>
-          <button type="submit" class="btn btn-primary mb-3">REMOVE</button>
           <input type="text" hidden name="id_producto" value="{{product.id_producto}}">
         </form>
       </div>
@@ -21,3 +27,5 @@
     {% endfor %}
   </div>
 {% endblock %}
+
+

@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+
+    <h1>Resultados de Búsqueda para "{{ query }}"</h1>
+
+    {% if resultados %}
+        <ul>
+            {% for producto in resultados %}
+            <div class="row">
+                <div class="card m-4" style="width: 19rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{resultados.nombre_producto}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">${{resultados.precio}}</h6>
+                    <p class="card-text"><img src={{resultados.imagen}} width="220px"></img></p>
+                    <form class="g-3" method="POST" action=".">{% csrf_token %}
+                      <input type="hidden" name="action" value="add_carts">
+                      <button type="submit" class="btn btn-primary mb-3">ADD</button>
+                      <input type="text" hidden name="id_producto" value="{{resultados.id_producto}}">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+        <ul>
+            {% for producto in resultados %}
+            <div class="row">
+                <div class="card m-4" style="width: 19rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{resultados.nombre_producto}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">${{resultados.precio}}</h6>
+                    <p class="card-text"><img src={{resultados.imagen}} width="220px"></img></p>
+                    <form class="g-3" method="POST" action=".">{% csrf_token %}
+                      <input type="hidden" name="action" value="add_carts">
+                      <button type="submit" class="btn btn-primary mb-3">ADD</button>
+                      <input type="text" hidden name="id_producto" value="{{resultados.id_producto}}">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
+
