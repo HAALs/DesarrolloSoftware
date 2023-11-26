@@ -19,13 +19,14 @@
                 <img src="{{producto.imagen_url}}" 
                 style="max-width: 150px; max-height: 150px;" class="img-thumbnail" alt="">
                     <figcaption class="figure-caption text-center">{{producto.nombre_producto}}</figcaption>
-                    <figcaption class="figure-caption text-center">{{producto.caracteristica}}</figcaption>            
+                    <figcaption class="figure-caption text-center">{{producto.caracteristica}}</figcaption>
+                    <figcaption class="figure-caption text-center">{{producto.id_producto}}</figcaption>            
                 </figure>                      
         </td>
         <td>
           {{producto.quantity}}
           <form action="/carts/" method="post">{% csrf_token %}
-            <input id='prod_id' name="prod_id" hidden value="{{id_producto}}"/> 
+            <input id='prod_id' name="prod_id" hidden value="{{producto.id_producto}}"/> 
             <button type="submit" class="btn btn-danger btn-sm">Restar producto</button>
           </form>
         </td>      

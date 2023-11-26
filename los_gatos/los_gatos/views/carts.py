@@ -7,21 +7,28 @@ import random
 import logging
 
 def load(request):
-    print('page building')
+    print("page building", flush=True)
     carts = []
     productos = []
     buy_order = str(random.randrange(1000000, 99999999))
     items = request.session.get('carts')
     total = 0
     try: 
-        logging.info("camiloo locoo111") 
-        #print("camiloo locoo111") 
-        if request == "POST":
-            prod_id = request.POST.get('prod_id')
-            print("camiloo locoo" + prod_id)  
+        #Eliminar item
+        if request.method == "POST": 
+            id_producto = request.POST.get('prod_id')
+            for item in items:
+                if item['id_producto'] == id_producto:
+                    if item['quantity'] > 1:
+                        item['quantity'] -= 1
+                        item['total'] = item['price'] * item['quantity']
+                    else:
+                        items.remove(item)
+            request.session['carts'] = items
+            request.session.save()
         print('load carts')
-        print('items: {items}')
         for item in items:
+            print(f"aaaaa: {item}", flush=True)
             total = total + int(item['total'])
     except Exception as ex:
         print('Error: ', ex)
@@ -49,7 +56,7 @@ def load_carts(request):
         #    quantity = quantity + cart.quantity
     except Exception as ex:
         print('Error ', ex)
-    print('quantity: ', quantity)
+    print(f'quantity: {quantity}', flush=True)
     return quantity
 
 """ def add_product(id_producto, username):

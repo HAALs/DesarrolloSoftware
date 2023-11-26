@@ -25,7 +25,7 @@ def index(request):
     print(f'request.method: {request.method}')
     if request.method == 'GET': 
         tipos = SubTipoProducto.objects.filter(id_sub_tipo_producto__in=[9,10])
-        products = Productos.objects.filter(id_tipo_producto='1')
+        products = Productos.objects.filter(id_tipo_producto='5')
         return render(request, "otros.html", {"tipos": tipos, "products": products})
     else: 
         tipo = request.POST.get('tipo')
@@ -41,7 +41,7 @@ def index(request):
             items = request.session.get('carts')
             print(f'items: {items}')
             tipos = SubTipoProducto.objects.filter(id_sub_tipo_producto__in=[9,10])
-            products = Productos.objects.filter(id_tipo_producto='1')
+            products = Productos.objects.filter(id_tipo_producto='5')
             producto = Productos.objects.get(id_producto=id_producto)
             if items != None:
                 finded = False

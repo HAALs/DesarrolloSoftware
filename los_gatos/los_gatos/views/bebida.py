@@ -4,7 +4,6 @@ from los_gatos.models.models import Productos,SubTipoProducto
 from los_gatos.views import carts
 
 def load(request):
-
     if request.method == 'GET':
         try:
             id_producto = request.GET.get('id_producto')
