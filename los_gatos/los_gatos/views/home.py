@@ -22,28 +22,29 @@ def load_product():
 
 # Create your views here.
 def index(request):
-    print(f'request.method: {request.method}')
+    print(f'request.method: {request.method}', flush=True)
     if request.method == 'GET': 
         products = Productos.objects.all()
         return render(request, "index.html", {"products": products})
     else:
         tipo = request.POST.get('q')
-        print(f'tipo: {tipo}')
-        print('action: ' + request.POST.get('action'))
+        if tipo is None:
+            tipo = ""
+        print(f'tipo: {tipo}', flush=True)
         if request.POST.get('action') == 'filter':
             products = Productos.objects.filter(nombre_producto__icontains=tipo)
             return render(request, "index.html", {"products": products})
         else:
             id_producto = request.POST.get('id_producto')
-            print(f'id_producto: {id_producto}')
+            print(f'id_producto: {id_producto}', flush=True)
             items = request.session.get('carts')
-            print(f'items: {items}')
+            print(f'items: {items}', flush=True)
             products = Productos.objects.filter(nombre_producto__icontains=tipo)
             producto = Productos.objects.get(id_producto=id_producto)
             if items != None:
                 finded = False
                 for item in items:
-                    print(f'item: {item}')
+                    print(f'item: {item}', flush=True)
                     if item['id_producto'] == id_producto:
                         item['quantity'] = int(item['quantity']) + 1
                         item['total'] = int(item['quantity'])*int(item['price'])

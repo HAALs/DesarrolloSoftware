@@ -67,7 +67,7 @@ def index(request):
         products = []
         #MODIFICAR ESTE MONTO POR EL TOTAL A PAGAR
         total = 1
-        return render(request, "carts.html", {'total': total})
+        return render(request, "transbank.html", {'products': products, 'total': total})
     elif  request.method == 'POST':        
         total = request.POST.get('total')
         print (total)
