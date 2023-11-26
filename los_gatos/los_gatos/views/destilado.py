@@ -4,7 +4,6 @@ from los_gatos.models.models import Productos,SubTipoProducto
 from los_gatos.views import carts
 
 def load(request):
-
     if request.method == 'GET':
         try:
             id_producto = request.GET.get('id_producto')
@@ -25,7 +24,7 @@ def index(request):
     print(f'request.method: {request.method}')
     if request.method == 'GET': 
         tipos = SubTipoProducto.objects.filter(id_sub_tipo_producto__in=[11,12])
-        products = Productos.objects.filter(id_tipo_producto='1')
+        products = Productos.objects.filter(id_tipo_producto='6')
         return render(request, "destilados.html", {"tipos": tipos, "products": products})
     else: 
         tipo = request.POST.get('tipo')
@@ -41,7 +40,7 @@ def index(request):
             items = request.session.get('carts')
             print(f'items: {items}')
             tipos = SubTipoProducto.objects.filter(id_sub_tipo_producto__in=[11,12])
-            products = Productos.objects.filter(id_tipo_producto='1')
+            products = Productos.objects.filter(id_tipo_producto='6')
             producto = Productos.objects.get(id_producto=id_producto)
             if items != None:
                 finded = False
