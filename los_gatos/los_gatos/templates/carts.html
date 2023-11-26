@@ -33,15 +33,12 @@
         <td>{{producto.total}}</td>             
         {% endfor %}        
       </tr>
-      <form id='frm-pay' name="pay" action="/webpay-plus-create" method="POST">{% csrf_token %}
-        <input id='txt-amount' name="amount" hidden value="{{total}}"/> 
-        <input id='txt-buy_order' name="buy_order" hidden value="{{buy_order}}"/>        
-        <input id='txt-session_id' name="session_id" hidden value="{{session_id}}"/>        
+      <form id='frm-pay' name="pay" action="/webpay-plus-create" method="POST">{% csrf_token %}         
       <tr>
         <td></td>
         <td><strong>Total</strong></td>
-        <td><strong>{{total}}</strong></td>
-        <td><button class="alert alert-primary">PAY</button></td>       
+        <td><strong>{{total}}</strong><input id='txt-total' name="total" hidden value="{{total}}" /></td>
+        <td><button class="alert alert-primary">PAGAR</button></td>       
       </tr>
     </form>            
     </tbody>

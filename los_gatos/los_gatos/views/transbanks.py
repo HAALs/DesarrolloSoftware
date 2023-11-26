@@ -61,14 +61,13 @@ def transbank_reverse_or_cancel(tokenws, data):
     return response
 
 def index(request):
-    print('hola mundo')
-    context = []  
+    print('hola mundo')  
     if request.method == 'GET':
         #MODIFICAR ESTA SECCIÓN Y CARGAR CARRITO DESDE LA SESSIÓN
         products = []
         #MODIFICAR ESTE MONTO POR EL TOTAL A PAGAR
         total = 1
-        return render(request, "carts.html", {'total': total})
+        return render(request, "transbank.html", {'products': products, 'total': total})
     elif  request.method == 'POST':        
         total = request.POST.get('total')
         print (total)
@@ -97,7 +96,7 @@ def index(request):
                 'amount': amount,
                 'transbank' : response.json()
             }
-        return render(request, "send-pay.html", {'context': context})
+            return render(request, "send-pay.html", {'context': context})
         
 def commit_pay(request):
     print('commit_pay: ')
