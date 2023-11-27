@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'los_gatos',
 ]
 
+SESSION_COOKIE_AGE = 1209600
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

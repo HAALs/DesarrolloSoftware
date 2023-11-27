@@ -18,6 +18,9 @@
 <body>
   <header>
     <!-- NAVBAR MENU-->
+    <figcaption class="figure-caption text-center">{{user.username}}</figcaption>
+    <figcaption class="figure-caption text-center">{{user.is_authenticated}}</figcaption>
+
     <nav class="navbar navbar-expand-lg my-4 border-bottom">
         <div class="container-fluid">    
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -60,105 +63,23 @@
                     <li class="nav-item">
                         <a class="dropdown-item" href="/carts" style="font-size: 3.2em"><i class="bi bi-cart4"></i></a>
                     </li>
+                </ul>
+                <ul>
+                  <li>
+                  <!--LOGIN BUTTON -->
+                    {% if user.is_active %}
+                    <form action="/login/">
+                        <button class="btn btn-outline-danger ml-auto bi bi-person-circle" type="submit">Cerrar sesion</button>
+                    </form>
+                    {% else %}
+                    <form action="/login/">
+                      <button class="btn btn-outline-success ml-auto bi bi-person-circle" type="submit">Login</button>
+                  </form>
+                  {% endif %}
+                  </li>
                 </ul>                                        
-                
-
             </div>
-        </div>
-    </nav>
-        <!--LOGIN BUTTON -->
-        <div>
-          {% if user.is_authenticated %}
-          <a class="btn btn-outline-warning ms-2" href="/carts/"><i class="bi bi-cart3"></i><span style="font-size:0.5em">{{ quantity }}</span></a>
-          {% endif %}
-          <button class="btn btn-outline-success ml-auto bi bi-person-circle" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvas-right" aria-controls="offcanvasRight"></button>
-        </div>
-      </div>
-    </nav>
-    {% if user.is_authenticated %}
-    <!-- OFFCANVAS MENU-->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-menu" aria-labelledby="offcanvas-menu-label">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvas-menu-label"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="icon">
-            <img src="{% static 'img/icon/settings.png' %}" alt="">
-          </div>
-          <div class="offcanvas-menu">
-            <ul class="option" aria-labelledby="dropdown-menu-button">
-              <a class="" href="/products"><li class=""><i class="bi bi-cart"></i> Product</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-    {% endif %}
-    <!-- OFFCANVAS LOGIN-->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-right" aria-labelledby="offcanvas-right-label">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvas-right-label"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      {% if user.is_authenticated %}  
-      <div class="offcanvas-body">
-        <div class="icon">
-          <img src="{% static 'img/icon/man.png' %}" alt="">         
-        </div>
-        <div class="user-data-login">
-          <p>{{ user.email }}</p>
-          <p>{{ user.username }}</p>
-          <p>{{ user.first_name}} {{ user.last_name}}</p>
-        </div>
-        <div class="offcanvas-login">
-          <div class="row">
-            <div class="col-sm-3">            
-            </div>
-            <div class="col-sm-6">
-              <div class="row">
-                <div class="col-sm-6">
-                  <form method="GET" action="/edit-user">
-                  <button class="btn btn-outline-primary ms-2 bi bi-pencil-square" type="submit"></button>
-                  </form>            
-                </div>                
-                <div class="col-sm-6">
-                  <form method="POST" action="/logout">{% csrf_token %}
-                    <button class="btn btn-outline-primary ms-2 bi bi-door-open" type="submit"></button>
-                  </form>            
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">             
-            </div>
-          </div>                                         
-        </div>       
-      </div>
-      {% else %}          
-      <div class="offcanvas-body">
-        <form method="POST" action="/login">{% csrf_token %}
-          <div class="mb-3">
-            <label for="txt-username" class="form-label">User</label>
-            <input type="text" required class="form-control" id="txt-username" name="username" aria-describedby="emailHelp"
-              placeholder="Username">
-          </div>
-          <div class="mb-3">
-            <label for="txt-password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="txt-password" name="password" required placeholder="**********">
-          </div>
-          <div class="row">
-            <div class="col-sm-6 ">
-              <button type="submit" class="m-1 w-100 btn btn-success bi bi-person"> LOGIN</button>              
-            </div>
-            <div class="col-sm-6 ">
-              <a href="/verification-recovery" class="m-1 w-100 btn btn-primary"><i class="bi bi-envelope"></i> Recovery</a>              
-            </div>                        
-          </div>
-        </form>     
-      </div>
-
-      </div>
-      {% endif %}          
+        </div>         
     </div>
   </header>
   <main>{% block content %}{% endblock %}</main>

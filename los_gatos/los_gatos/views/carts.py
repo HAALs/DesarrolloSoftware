@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from los_gatos.models.models import  AuthUser, Productos
-from los_gatos.views.iniciar_sesion import authorization
 from django.contrib.auth.models import User
 from typing import Iterable
 import random
