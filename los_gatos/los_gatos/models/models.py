@@ -1,5 +1,6 @@
 from django.db import models
-
+from datetime import datetime
+from django.contrib.auth.models import AbstractUser
 
 class AuthGroup(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -44,7 +45,7 @@ class AuthUser(models.Model):
     email = models.CharField(max_length=254)
     is_staff = models.IntegerField()
     is_active = models.IntegerField()
-    date_joined = models.DateTimeField()
+    date_joined = models.DateTimeField(default=datetime.now)
 
     class Meta:
         managed = False
