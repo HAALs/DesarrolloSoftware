@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import views as auth_views
 from los_gatos.views import home, bebida, cerveza, otro
 from los_gatos.views import transbanks, pagar, vino, destilado
 from los_gatos.views import espumante, iniciar_sesion, usuario, registro,carts

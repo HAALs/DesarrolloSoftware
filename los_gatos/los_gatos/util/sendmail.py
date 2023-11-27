@@ -7,7 +7,7 @@ from pathlib import Path
 from django.db.utils import IntegrityError
 from django.contrib.auth.models import User 
 from rest_framework.authtoken.models import Token
-from web_shopping.util.autogenerate import generate
+from los_gatos.util.autogenerate import generate
 from dotenv import load_dotenv
 
 # Initialise environment variables
