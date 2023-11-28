@@ -1,10 +1,16 @@
+from typing import Any
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from django.contrib.auth.backends import ModelBackend
+from django.urls import reverse_lazy
 from los_gatos.util.autogenerate import generate
 from los_gatos.models.models import Productos, AuthUser
 from django.core.serializers import serialize
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth import update_session_auth_hash
+from django.contrib import messages
 
 def loadLogin(request):
     return render(request, 'sesion.html')
@@ -68,3 +74,29 @@ def authenticate(request, username, password):
             print("No existe User", flush=True)
             return None
         return user
+
+# Cambiar Contraseña usuario
+
+#@add_group_name_to_context
+class ProfilePasswordChangeView(PasswordChangeView):
+    template_name = 'profile/change_password.html'
+    success_url = reverse_lazy('profile')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['password_changed'] = self.request.session.get('password_changed', False)
+        return context
+
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Cambio de contraseña exitosa')
+        update_session_auth_hash(self.request, form.user)
+        self.request.session['password_changed'] = True
+        return super().form_valid(form)
+    
+    def form_invalid(self, form):
+        messages.error(self.request, 'Cambio de contraseña exitoso')
+        return super().form_invalid(form)
+
+
+

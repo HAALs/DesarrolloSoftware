@@ -7,6 +7,11 @@ from los_gatos.views import espumante, iniciar_sesion, usuario, registro,carts
 from los_gatos.views.errorpage import error_404
 from los_gatos.views import errorpage
 from los_gatos.views import buscar_productos
+from los_gatos.views.iniciar_sesion import ProfilePasswordChangeView
+from django.contrib.auth.decorators import login_required
+
+
+
 
 urlpatterns = [
     path('buscar/', buscar_productos.find_productos),
@@ -30,4 +35,5 @@ urlpatterns = [
     path('error-401/', errorpage.error_401_page),
     path('error-403/', errorpage.error_403_page),
     path('error-404/', errorpage.error_404_page),
+    path('password_change/', login_required(ProfilePasswordChangeView.as_view()), name='profile_password_change'),
 ]
