@@ -5,9 +5,9 @@
     <caption>Products in the cart</caption>
     <thead>
       <tr>
-        <th scope="col">PRODUCT</th>
-        <th scope="col">QUANTY</th>
-        <th scope="col">PRICE</th>
+        <th scope="col">PRODUCTO</th>
+        <th scope="col">CANTIDAD</th>
+        <th scope="col">PRECIO</th>
         <th scope="col">TOTAL</th>
       </tr>
     </thead>
@@ -43,10 +43,29 @@
     </form> 
     <!-- ... (código existente) ... -->
 
-    <form action="." method="POST">{% csrf_token %}
+
+    <!-- Formulario para Limpiar Carrito con Confirmación -->
+    <form id="clearCartForm" action="." method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="erase">
+      <button type="button" class="btn btn-warning" onclick="confirmClearCart()">Limpiar Carrito</button>
+    </form>
+
+    <script>
+    function confirmClearCart() {
+      if (confirm('¿Estás seguro de que deseas limpiar el carrito?')) {
+        document.getElementById('clearCartForm').submit();
+        location.reload(true);  // Recargar la página después de enviar el formulario
+      }
+    }
+    </script>
+
+
+
+    <!-- <form action="." method="POST">{% csrf_token %}
       <input type="hidden" name="action" value="erase">
       <button type="submit" class="btn btn-warning">Limpiar Carrito</button>
-    </form>
+    </form>-->
 
 <!-- ... (código existente) ... -->
            
