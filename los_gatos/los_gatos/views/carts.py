@@ -28,7 +28,7 @@ def load(request):
             request.session['carts'] = items
             request.session.save()
             if request.POST.get('action') == 'erase':
-                # Elimina todos los productos del carrito en la sesión
+                # Limpiar el carrito
                 del request.session['carts']
                 request.session.save()
 
