@@ -369,6 +369,14 @@ hr {
 	cursor: pointer;
 }
 
+
+.badge-custom-color {
+  background-color: #1a4fcb; /* Reemplaza "your_color_code" con el código de color deseado */
+  color: #050404; /* Reemplaza "your_text_color" con el color de texto deseado */
+}
+
+
+
 .option a li:hover {
 	color: #0d6efd !important;
 	text-decoration: none;

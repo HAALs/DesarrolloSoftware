@@ -61,9 +61,15 @@
                 </ul>
                 <ul class="navbar-nav mx-2">
                     <li class="nav-item">
-                        <a class="dropdown-item" href="/carts" style="font-size: 3.2em"><i class="bi bi-cart4"></i></a>
+                        <a class="dropdown-item" href="/carts" style="font-size: 3.2em">
+                            <i class="bi bi-cart4"></i>
+                            {% if request.session.carts %}
+                                <span class="badge badge-custom-color">{{ request.session.carts|length }}</span>
+                            {% endif %}
+                        </a>
                     </li>
                 </ul>
+                
                 <ul>
                   <li>
                   <!--LOGIN BUTTON -->
