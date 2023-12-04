@@ -103,6 +103,11 @@ def commit_pay(request):
     print(f'METHOD: {request.method}')
     token_ws = request.GET['token_ws']
     response = transbank_commit(token_ws)
-    json_response = response.json()
+    
+    if response.status_code == 200:
+        # Limpiar el carrito de compras en la sesión del usuario
+        request.session['carts'] = []
+        request.session.save()
 
-    return render(request, 'commit-pay.html', {'transaction_detail': json_response})
+        json_response = response.json()
+        return render(request, 'commit-pay.html', {'transaction_detail': json_response})

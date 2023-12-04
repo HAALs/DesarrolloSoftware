@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import AbstractUser
-
+from django.contrib.contenttypes.models import ContentType
 
 class AuthGroup(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -164,6 +164,7 @@ class TipoProducto(models.Model):
     class Meta:
         managed = False
         db_table = 'tipo_producto'
+
 
 #class Carts(models.Model):
 #    id = models.BigAutoField(primary_key=True)
