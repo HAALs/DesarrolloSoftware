@@ -64,6 +64,13 @@
                         <a class="dropdown-item" href="/carts" style="font-size: 3.2em">
                             <i class="bi bi-cart4"></i>
                             {% if request.session.carts %}
+                            <style>
+                                .badge-custom-color {
+                                    background-color: #1a4fcb; /* Reemplaza "your_color_code" con el código de color deseado */
+                                    color: #050404; /* Reemplaza "your_text_color" con el color de texto deseado */
+                                }
+                            </style>
+                            
                                 <span class="badge badge-custom-color">{{ request.session.carts|length }}</span>
                             {% endif %}
                         </a>
