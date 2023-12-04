@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
+from django.contrib.contenttypes.models import ContentType
 from los_gatos.views import home, bebida, cerveza, otro
 from los_gatos.views import transbanks, pagar, vino, destilado
 from los_gatos.views import espumante, iniciar_sesion, usuario, registro,carts
@@ -35,5 +36,5 @@ urlpatterns = [
     path('error-401/', errorpage.error_401_page),
     path('error-403/', errorpage.error_403_page),
     path('error-404/', errorpage.error_404_page),
-    path('password_change/', login_required(ProfilePasswordChangeView.as_view()), name='profile_password_change'),
+    #path('password_change/', login_required(ProfilePasswordChangeView.as_view()), name='profile_password_change'),
 ]
