@@ -4,11 +4,10 @@ from django.contrib.auth import views as auth_views
 from django.contrib.contenttypes.models import ContentType
 from los_gatos.views import home, bebida, cerveza, otro
 from los_gatos.views import transbanks, pagar, vino, destilado
-from los_gatos.views import espumante, iniciar_sesion, usuario, registro,carts
+from los_gatos.views import espumante, iniciar_sesion, usuario, registro, carts
 from los_gatos.views.errorpage import error_404
 from los_gatos.views import errorpage
 from los_gatos.views import buscar_productos
-from los_gatos.views.iniciar_sesion import ProfilePasswordChangeView
 from django.contrib.auth.decorators import login_required
 
 

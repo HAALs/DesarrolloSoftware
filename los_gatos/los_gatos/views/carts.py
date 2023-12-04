@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from typing import Iterable
 import random
 import logging
+from django.shortcuts import redirect
+from django.contrib import messages
 
 def load(request):
     print("page building", flush=True)
@@ -25,6 +27,11 @@ def load(request):
                         items.remove(item)
             request.session['carts'] = items
             request.session.save()
+            if request.POST.get('action') == 'erase':
+                # Elimina todos los productos del carrito en la sesión
+                del request.session['carts']
+                request.session.save()
+
         print('load carts')
         for item in items:
             print(f"aaaaa: {item}", flush=True)
@@ -57,6 +64,21 @@ def load_carts(request):
         print('Error ', ex)
     print(f'quantity: {quantity}', flush=True)
     return quantity
+
+#def clear_cart(request):
+#    try:
+#        # Elimina todos los productos del carrito en la sesión
+#        del request.session['carts']
+#        request.session.save()
+#
+#        # Opcional: Puedes mostrar un mensaje de éxito
+#        messages.success(request, 'El carrito se ha limpiado correctamente.')
+#
+#    except KeyError:
+#        # Si la clave 'carts' no está presente en la sesión, no hay nada que limpiar
+#        pass
+#
+#    return redirect('carts.html')  # Reemplaza 'nombre_de_tu_vista_load' con el nombre real de tu vista 'load'
 
 """ def add_product(id_producto, username):
     print('add product carts')

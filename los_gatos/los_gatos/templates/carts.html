@@ -40,7 +40,16 @@
         <td><strong>{{total}}</strong><input id='txt-total' name="total" hidden value="{{total}}" /></td>
         <td><button class="alert alert-primary">PAGAR</button></td>       
       </tr>
-    </form>            
+    </form> 
+    <!-- ... (código existente) ... -->
+
+    <form action="." method="POST">{% csrf_token %}
+      <input type="hidden" name="action" value="erase">
+      <button type="submit" class="btn btn-warning">Limpiar Carrito</button>
+    </form>
+
+<!-- ... (código existente) ... -->
+           
     </tbody>
   </table>
 {% endblock %}
